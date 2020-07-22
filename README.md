@@ -2,7 +2,7 @@
 Demonstrating how to use Optimizely to test Twilio SMS content.
 
 ## Requirements:
-- Access to Optimizely Full Stack, sign up for a (free dev account)|[https://www.optimizely.com/rollouts/]
+- Access to Optimizely Full Stack, sign up for a [free dev account](https://www.optimizely.com/rollouts/)
 - Access to Twilio functions and a phone number
 
 ## Getting Started:
@@ -10,7 +10,7 @@ Demonstrating how to use Optimizely to test Twilio SMS content.
 2. Check the box above the `code` container to `Check for valid Twilio signature`. This will ensure that your Twilio Accound SID and auth token are added safely to be used by your function.
 2. Under the `Configure` tab of your Twilio function, check the box for `Enable ACCOUNT_SID and AUTH_TOKEN`.
 2. In this same section, add the following dependencies:
-`Name: @optimizely/optimizely-sdk; Version: 4.1.0` Check (here)|[https://www.npmjs.com/package/@optimizely/optimizely-sdk] for the latest Optimizely SDK version for Nodejs
+`Name: @optimizely/optimizely-sdk; Version: 4.1.0` Check [here](https://www.npmjs.com/package/@optimizely/optimizely-sdk) for the latest Optimizely SDK version for Nodejs
 `Name: request-promise; Version: 4.2.5`
 2. Create an Optimizely Full Stack Project, retrieve your datafile URL and replace the datafile URL in the `function.js` file.
 3. Create an experiment in Optimizely and replace the experiment key and variation keys with what you've assigned in the Optimizely app.
