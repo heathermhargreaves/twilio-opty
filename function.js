@@ -6,7 +6,7 @@ exports.handler = function(context, event, callback) {
   var rp = require('request-promise');
 
   // datafile URL
-  var url = 'https://cdn.optimizely.com/datafiles/B9JfyqMb3Pm8WfdDMFGsD.json';
+  var url = 'https://cdn.optimizely.com/datafiles/{SDK_KEY}.json';
   var options = {uri: url, json: true};
   var optimizely;
 
@@ -28,13 +28,13 @@ exports.handler = function(context, event, callback) {
     // assume that if a user is saying 'hello' they are just starting
     if (incomingMessage.toLowerCase() === 'hello') {
       // activate the Optimizely Experiment
-      var variationKey = optimizely.activate('twilio_test', userId);
+      var variationKey = optimizely.activate('EXPERIMENT_KEY', userId);
       console.log('variation', variationKey)
       // split logic based on which variation the user is in
-      if (variationKey === 'variation_1') {
+      if (variationKey === 'VARIATION_KEY') {
         // execute code for A
         twiml.message("Hi there what kind of workout should we send you today? Reply (1) for Yoga, (2) for Cycling, or (3) for Strength. Text 'Stop' if you would like to opt out");
-      } else if (variationKey === 'variation_2') {
+      } else if (variationKey === 'VARIATION_KEY') {
         // execute code for B
         twiml.message("Who's looking to get fit today?? Let us send you a personalized class next time you log into Variis! Reply (1) for Yoga🧘‍♂️️, (2) for Cycling🚲, or (3) for Strength💪");
       } else {
